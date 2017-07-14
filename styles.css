@@ -21,7 +21,7 @@
 /*Main Content Container
 =============================================*/
 .main-content {
-    height:90%;
+    height:100%;
     display:flex;
     align-items: stretch;
     flex-direction: row;
@@ -48,7 +48,7 @@
 
 
 .single-song {
-    margin: 0.5rem;
+    margin-top: 0.5rem;
     padding: 0.5rem 1.5rem;
 }
 
@@ -56,7 +56,7 @@
 =============================================*/
 
 .col1 {
-    background-image:url(images/songinfo.jpg);
+    background-image:url(images/col1.jpg);
     background-size:cover;
     border: 1px solid black;
     color:white;
@@ -66,4 +66,30 @@
 
 input.form-control.slider-input {
     padding: 0;
+}
+.flex1 {
+    display:flex;
+    flex-direction: column;
+}
+.flex2 {
+    display:flex;
+    flex-direction: column;
+}
+.container {
+    display: flex;
+    justify-content: space-around;
+    align-items: stretch;
+}
+.form-group1{
+    text-align: left;
+    font-weight: bolder;
+}
+.form-group {
+    text-align: center;
+    font-size:1em;
+    font-weight: bolder;
+    margin-top:1em;
+}
+.form-check-label {
+    text-align: right;
 }
