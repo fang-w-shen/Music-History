@@ -16,7 +16,7 @@ function populate() {
 		for (var j = 0; j < 2; j++) {
 			var artistnamebegin = songs[i].indexOf(">") + 1;
 			var artistnameend = songs[i].indexOf("on the") - 1;
-			var albumnamebegin = songs[i].indexOf("album") + 6;
+			var albumnamebegin = songs[i].indexOf("on the album");
 			var albumnameend = songs[i].length;
 			if (j === 0) {
 				document.getElementById(i+""+j).innerHTML = songs[i].slice(artistnamebegin,artistnameend);
@@ -26,4 +26,12 @@ function populate() {
 			}
 		}
 	}
+}
+
+function updateTextInput(val) {
+  document.getElementById('num1').value = val;
+}
+
+function updateTextInput1(val) {
+  document.getElementById('num2').value = Number(val);
 }

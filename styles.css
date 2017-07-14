@@ -28,28 +28,19 @@
     width:100%;
     justify-content: space-between;
 }
-
-.equal-height {
-
-   /* height:90%*/
-
-}
-/*Artist List Section
-=============================================*/
-
 .col2 {
     background-image:url(images/songinfo.jpg);
     background-size:cover;
     border: 1px solid RGB(0, 0, 0);
     color:white;
-    padding:auto;
-    flex-grow:3;
+    padding: auto;
+    flex-basis:75%;
 }
 
 
 .single-song {
     margin-top: 0.5rem;
-    padding: 0.5rem 1.5rem;
+    padding: 1em;
 }
 
 /*Song Filter Section
@@ -60,8 +51,7 @@
     background-size:cover;
     border: 1px solid black;
     color:white;
-    flex-grow:1;
-    margin-right:1em;
+    flex-basis:23%;
 }
 
 input.form-control.slider-input {
