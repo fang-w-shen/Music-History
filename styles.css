@@ -80,7 +80,6 @@ fieldset {
     color:white;
     padding: auto;
     flex-basis:75%;
-    opacity:.8;
 }
 
 
@@ -106,7 +105,6 @@ fieldset {
     font-size:1.5em;
     font-weight: bolder;
     color:#2dfc1e;
-    opacity:.8;
 }
 
 input.form-control.slider-input {
