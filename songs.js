@@ -6,11 +6,8 @@ songs[songs.length] = "Another Brick in the Wall > by Pink Floyd on the album Th
 songs[songs.length] = "Welco(me to the Jungle > by Guns & Roses on the album Appetite for Destruction";
 songs[songs.length] = "Ironi!c > by Alanis Moris*ette on the album Jagged Little Pill";
 
-
-
-
 function populate() {
-	for (var i = 0; i < 5; i++) {
+	for (var i = 0; i < songs.length; i++) {
 		var song = songs[i].indexOf(">") - 1;
 		document.getElementById(i).innerHTML = songs[i].slice(0,song);
 		for (var j = 0; j < 2; j++) {
@@ -34,4 +31,56 @@ function updateTextInput(val) {
 
 function updateTextInput1(val) {
   document.getElementById('num2').value = Number(val);
+}
+
+document.getElementById("addb").addEventListener("click", function() {
+	document.getElementById("main").classList.add('hidden');
+	document.getElementById("addb").style.color = "#2dfc1e";
+	document.getElementById("viewb").style.color = "white"
+	document.getElementById("body").style.backgroundColor = "#c91e62";
+	document.getElementById("addb").style.backgroundColor = "#ffff14";
+	document.getElementById("viewb").style.backgroundColor = "transparent";
+	document.getElementById("add").classList.remove('hidden');
+				
+})
+document.getElementById("viewb").addEventListener("click", function() {
+	document.getElementById("add").classList.add('hidden');
+	document.getElementById("viewb").style.color = "#2dfc1e";
+	document.getElementById("addb").style.color = "white"
+	document.getElementById("body").style.backgroundColor = "white";
+	document.getElementById("viewb").style.backgroundColor = "#ffff14";
+	document.getElementById("addb").style.backgroundColor = "transparent";
+	document.getElementById("main").classList.remove('hidden');
+				
+})
+
+document.getElementById("addbutton").addEventListener("click", addtoplaylist);
+
+
+function addtoplaylist() {
+	var name = document.getElementById("song-name").value;
+	var artist = document.getElementById("artist").value;
+	var album = document.getElementById("album-name").value;
+	if (name ==="" || artist === "" || album === "") {
+		alert("All three fields must have a value");
+	}
+	else {
+		songs.push(name+" > by "+artist+" on the album " +album);
+		addtodom();
+	}
+}
+
+function addtodom() {
+	for (var i = songs.length-1; i < songs.length; i++) {
+		document.getElementById("row").innerHTML+=
+			`<div class="col-12 single-song">
+	         <h2 id="${i}">Song Name</h2>
+	         <label id="${i}0">Artist name</label> | <label id="${i}1">Album name</label> | <label>Genre</label>
+	         </div>`;
+		document.getElementById("song-name").value="";
+		document.getElementById("artist").value="";
+		document.getElementById("album-name").value="";
+					
+	}
+
 }

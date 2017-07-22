@@ -5,22 +5,36 @@
 	  <title>Music History</title>
 	  <link rel="stylesheet" type="text/css" href="styles.css">
 	</head>
-	<body>
+	<body id="body">
 	    <!-- Navigation Bar -->
 	    <div class="nav-bar">
 	        <nav class="nv">
-	            <a class="" href="#">View Music</a> |
-	            <a class="" href="#">Add Music</a> |
+	            <a id="viewb" class="" href="#">View Music</a> |
+	            <a id="addb" class="" href="#">Add Music</a> |
 	            <a class="" href="#">Profile</a>
 	        </nav>
 	    </div>
 	    <!-- End Of Navigation Bar -->
 
 	    <!-- Main Content -->
-	    <div class="main-content">
+	    <div id="add" class="hidden"> 
+	    	 <fieldset>
+	    	 <legend><b>Add Your Own Songs</b></legend>
+		    	 <label for="song-name">Song Name: </label>
+		         <input id="song-name" class="" type="text" name="song-name" min="0" max="20">
+		         <br>
+		         <label for="artist">Artist Name: </label>
+		         <input id="artist" class="" type="text" name="song-name" min="0" max="20">
+		         <br>
+		         <label for="album-name">Album Name:</label>
+		         <input id="album-name" class="" type="text" name="song-name" min="0" max="20">
+		         <br>
+		         <input id="addbutton" type="button" value="Add Your Song" name="">
+	         </fieldset>
+	    </div>
+	    <div id="main" class="main-content">
 
 <!--                   Col 1                    -->
-
 	                <div class="col1">
 	                    <form action="">
 	                        <div class="form-group">
@@ -107,9 +121,16 @@
 	                                            <input class="form-check-input" type="checkbox" id="inlineCheckbox3" value="option3"> HipHop
 	                                        </label>
 	                                    </div>
-	                                </div>
+		                                    
+										   
+	                                </div> 
+									
 	                            </div>
-
+	                            	<br>
+									<label>VOLUMEEEEE</label>
+									<br>
+									<input class="inputRange" id="num2" type="range" min="0" max="100" value="0" onmousemove="updateTextInput(this.value);">
+									<input class="inputNumber" id="num1" min="0" max="100" type="number" value="0" oninput="updateTextInput1(this.value);">
 
 	                        </div>
 	                    </form>
@@ -120,36 +141,36 @@
 <!--                  Col 2                 -->
 
 	                <div class="col2">
-	                    <div class="row">
+	                    <div id="row">
 	                        <div class="col-12 single-song">
-	                            <h3 id="0">Song Name</h3>
+	                            <h2 id="0">Song Name</h3>
 	                            <label id="00">Artist name</label> | <label id="01">Album name</label> | <label class="3">Genre</label>
 	                        </div>
 	                        <div class="col-12 single-song">
-	                            <h3 id="1">Song Name</h3>
+	                            <h2 id="1">Song Name</h3>
 	                            <label id="10">Artist name</label> | <label id="11">Album name</label> | <label>Genre</label>
 	                        </div>
 	                        <div class="col-12 single-song">
-	                            <h3 id="2">Song Name</h3>
+	                            <h2 id="2">Song Name</h3>
 	                            <label id="20">Artist name</label> | <label id="21">Album name</label> | <label>Genre</label>
 	                        </div>
 	                        <div class="col-12 single-song">
-	                            <h3 id="3">Song Name</h3>
+	                            <h2 id="3">Song Name</h3>
 	                            <label id="30">Artist name</label> | <label id="31">Album name</label> | <label>Genre</label>
 	                        </div>
 	                        <div class="col-12 single-song">
-	                            <h3 id="4">Song Name</h3>
+	                            <h2 id="4">Song Name</h3>
 	                            <label id="40">Artist name</label> | <label id="41">Album name</label> | <label>Genre</label>
 	                        </div>
-	                        <input type="button" value="button" ="" class="button" onclick="populate();">
+	                        
 	                    </div>
+	                    <input type="button" value="button" class="button" onclick="populate();">
 	                </div>
 
 	    </div>
-	    <label>VOLUMEEEEE</label>
-	    <input class="inputRange" id="num2" type="range" min="0" max="100" value="0" onmousemove="updateTextInput(this.value)" />
-		<input class="inputNumber" id="num1" min="0" max="100" type="number" value="0" onkeyup="updateTextInput1(this.value)" onmousedown="updateTextInput1(this.value)" onmouseup="updateTextInput1(this.value)"/>
+	    
+	
 
+		<script type="text/javascript" src="songs.js"></script>
 	</body>
-	<script type="text/javascript" src="songs.js"></script>
 </html>
