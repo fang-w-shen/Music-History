@@ -36,6 +36,10 @@
 #viewb {
     color:#2dfc1e;
     background-color: #ffff14;
+    border-radius:10%;
+}
+#addb {
+    border-radius: 10%;
 }
 #add {
     width:13%;
@@ -76,16 +80,20 @@ fieldset {
     color:white;
     padding: auto;
     flex-basis:75%;
+    opacity:.8;
 }
 
 
 .single-song {
-    margin-right: 10%;
+    margin-right: 5%;
     font-weight: bolder;
     font-size: 1em;
     color:#2dfc1e;
+    width:45%;
 }
-
+.single-song label {
+    font-size:.9em;
+}
 /*Song Filter Section
 =============================================*/
 
@@ -98,6 +106,7 @@ fieldset {
     font-size:1.5em;
     font-weight: bolder;
     color:#2dfc1e;
+    opacity:.8;
 }
 
 input.form-control.slider-input {
@@ -142,6 +151,7 @@ input.form-control.slider-input {
 
 body {
     height:80vh;
+    background-color: #ff4d16;
 }
 input[type="button"] {
     color:red;

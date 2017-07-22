@@ -47,7 +47,7 @@ document.getElementById("viewb").addEventListener("click", function() {
 	document.getElementById("add").classList.add('hidden');
 	document.getElementById("viewb").style.color = "#2dfc1e";
 	document.getElementById("addb").style.color = "white"
-	document.getElementById("body").style.backgroundColor = "white";
+	document.getElementById("body").style.backgroundColor = "#ff4d16";
 	document.getElementById("viewb").style.backgroundColor = "#ffff14";
 	document.getElementById("addb").style.backgroundColor = "transparent";
 	document.getElementById("main").classList.remove('hidden');
@@ -61,12 +61,22 @@ function addtoplaylist() {
 	var name = document.getElementById("song-name").value;
 	var artist = document.getElementById("artist").value;
 	var album = document.getElementById("album-name").value;
-	if (name ==="" || artist === "" || album === "") {
-		alert("All three fields must have a value");
+	if (name ==="") {
+		alert("Enter a Song Name");
+		document.getElementById("song-name").focus();
+	}
+	else if(artist === "") {
+		alert("Enter an Artist Name");
+		document.getElementById("artist").focus();
+	}
+	else if(album === "") {
+		alert("Enter an Album Name");
+		document.getElementById("album-name").focus();
 	}
 	else {
 		songs.push(name+" > by "+artist+" on the album " +album);
 		addtodom();
+		document.getElementById("song-name").focus();
 	}
 }
 
@@ -83,4 +93,13 @@ function addtodom() {
 					
 	}
 
+}
+document.getElementById("song-name").onkeydown = enter;
+document.getElementById("artist").onkeydown = enter;
+document.getElementById("album-name").onkeydown = enter;
+
+function enter(e) {
+	if (e.keyCode == 13) {
+		addtoplaylist();	
+	}
 }
